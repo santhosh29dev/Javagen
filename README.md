@@ -2,39 +2,31 @@
 
 Java ecosystem scaffolding CLI tool. Generates boilerplate Java projects from terminal commands.
 
+## Install
+
+### Windows (PowerShell)
+```powershell
+iwr -useb https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1 | iex
+```
+
+### macOS / Linux
+```bash
+curl -fsSL https://github.com/santhosh29dev/Javagen/releases/latest/download/install.sh | bash
+```
+
+### From Source
+```bash
+git clone https://github.com/santhosh29dev/Javagen.git
+cd Javagen
+mvn clean package
+java -jar target/javagen-1.0.0.jar --help
+```
+
 ## Requirements
 
 - Java 21+
-- Maven 3.9+
-
-## Build
-
-```bash
-mvn clean package
-```
-
-The fat JAR will be at `target/javagen-1.0.0.jar`.
 
 ## Usage
-
-### As a JAR
-
-```bash
-java -jar target/javagen-1.0.0.jar create web --name myproject
-```
-
-### As a Windows global command
-
-1. Add `S:\javagen` to your system PATH
-2. Then use directly:
-
-```cmd
-javagen create web --name myproject
-javagen create desk --name myproject
-javagen create app --name myproject
-```
-
-### Commands
 
 ```bash
 # Web project (Spring Boot + React/Angular/Vue)
@@ -53,11 +45,11 @@ javagen create desk --name mydesktop
 javagen create app --name mymobile
 
 # Help
-java -jar target/javagen-1.0.0.jar --help
-java -jar target/javagen-1.0.0.jar create --help
+javagen --help
+javagen create --help
 ```
 
-### Options
+## Options
 
 | Option | Description | Default |
 |--------|-------------|---------|
