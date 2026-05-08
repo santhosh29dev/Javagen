@@ -1,0 +1,10 @@
+const API_BASE = '/API';
+
+export default {
+  get: (url) => fetch(`${API_BASE}${url}`).then(r => r.json()),
+  post: (url, body) => fetch(`${API_BASE}${url}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  }).then(r => r.json()),
+};

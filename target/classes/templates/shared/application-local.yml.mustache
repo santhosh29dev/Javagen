@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:{{database}}://localhost:{{#database}}5432{{/database}}{{#database}}3306{{/database}}/{{projectName}}_db
+    username: root
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    {{packageName}}: DEBUG

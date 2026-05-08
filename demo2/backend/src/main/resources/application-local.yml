@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgres://localhost:54323306/demo2_db
+    username: root
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    com.demo2: DEBUG
