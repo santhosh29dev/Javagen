@@ -4,22 +4,12 @@ Java ecosystem scaffolding CLI tool. Generates boilerplate Java projects from te
 
 ## Install
 
-### Windows (CMD) — Easiest
-Download and run [`javagen-setup.exe`](https://github.com/santhosh29dev/Javagen/releases — just double-click it.
+### All Platforms — Easiest
+Download [`javagen.zip`](https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen.zip), extract it, and run the installer.
 
 Or from CMD:
 ```cmd
-curl.exe -fsSL -o javagen-setup.exe https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen-setup.exe && javagen-setup.exe
-```
-
-### Windows (PowerShell)
-```powershell
-Invoke-WebRequest -Uri "https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
-```
-
-### macOS / Linux
-```bash
-curl -fsSL https://github.com/santhosh29dev/Javagen/releases/latest/download/install.sh | bash
+curl.exe -fsSL -o javagen.zip https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen.zip
 ```
 
 ### From Source
@@ -56,5 +46,3 @@ javagen create app --name mymobile
 javagen --help
 javagen create --help
 ```
-
-
