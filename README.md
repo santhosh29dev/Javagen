@@ -4,9 +4,17 @@ Java ecosystem scaffolding CLI tool. Generates boilerplate Java projects from te
 
 ## Install
 
+### Windows (CMD) — Easiest
+Download and run [`install-curl.bat`](https://github.com/santhosh29dev/Javagen/releases/latest/download/install-curl.bat) — just double-click it.
+
+Or from CMD:
+```cmd
+curl.exe -fsSL -o install.bat https://github.com/santhosh29dev/Javagen/releases/latest/download/install-curl.bat && install.bat
+```
+
 ### Windows (PowerShell)
 ```powershell
-iwr -useb https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1 | iex
+Invoke-WebRequest -Uri "https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
 ```
 
 ### macOS / Linux

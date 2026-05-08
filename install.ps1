@@ -1,5 +1,5 @@
 # Install javagen from GitHub Releases (PowerShell)
-# Usage: iwr -useb https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1 | iex
+# Usage: Invoke-WebRequest -Uri "https://github.com/santhosh29dev/Javagen/releases/latest/download/install.ps1" -OutFile "$env:TEMP\install.ps1"; & "$env:TEMP\install.ps1"
 
 $ErrorActionPreference = "Stop"
 $Repo = "santhosh29dev/Javagen"
