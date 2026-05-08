@@ -57,31 +57,4 @@ javagen --help
 javagen create --help
 ```
 
-## Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `-n, --name` | Project name | (required) |
-| `-b, --backend` | Backend: spring, quarkus, micronaut | spring |
-| `-f, --frontend` | Frontend: react, angular, vue | react |
-| `-d, --database` | Database: postgres, mysql, mongodb, sqlite | postgres |
-| `-a, --auth` | Auth: jwt, oauth2, session | jwt |
-| `--docker` | Include Docker setup | false |
-| `--swagger` | Include Swagger/OpenAPI | false |
-| `--redis` | Include Redis config | false |
-| `--kafka` | Include Kafka config | false |
-| `-i, --interactive` | Interactive prompts | false |
-
-## Architecture
-
-```
-src/main/java/com/javagen/
-├── JavagenCLI.java              # Entry point
-├── cli/                          # Picocli commands
-├── core/                         # Engine, context, template rendering
-├── generators/                   # Project generators (web/desktop/app)
-├── features/                     # Feature modules (backend/frontend/db/auth/docker/swagger)
-├── model/                        # Enums (ProjectType, BackendType, etc.)
-├── services/                     # File I/O, prompts
-└── utils/                        # Constants
-```
