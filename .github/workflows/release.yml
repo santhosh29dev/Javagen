@@ -36,6 +36,9 @@ jobs:
             install.ps1
             install.bat
             install-curl.bat
+            installer/install-javagen.bat
+            installer/uninstall-javagen.bat
+            installer/README.txt
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
