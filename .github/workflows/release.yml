@@ -35,10 +35,39 @@ jobs:
             install.sh
             install.ps1
             install.bat
-            install-curl.bat
-            installer/install-javagen.bat
-            installer/uninstall-javagen.bat
-            installer/README.txt
           generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build-installer:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn clean package -DskipTests
+
+      - name: Install NSIS
+        run: choco install nsis -y
+
+      - name: Build installer
+        shell: cmd
+        run: |
+          cd installer\build
+          makensis.exe javagen-setup.nsi
+
+      - name: Upload installer to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: installer/build/javagen-setup.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -5,11 +5,11 @@ Java ecosystem scaffolding CLI tool. Generates boilerplate Java projects from te
 ## Install
 
 ### Windows (CMD) — Easiest
-Download and run [`javagen-setup`](https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen-setup) — just double-click it.
+Download and run [`javagen-setup.exe`](https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen-setup.exe) — just double-click it.
 
 Or from CMD:
 ```cmd
-curl.exe -fsSL -o install.bat https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen-setup && install.bat
+curl.exe -fsSL -o javagen-setup.exe https://github.com/santhosh29dev/Javagen/releases/latest/download/javagen-setup.exe && javagen-setup.exe
 ```
 
 ### Windows (PowerShell)
