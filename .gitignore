@@ -2,6 +2,10 @@
 target/
 *.jar
 dependency-reduced-pom.xml
+installer/build/javagen.jar
+!installer/build/javagen-setup.nsi
+!installer/build/LICENSE.txt
+!installer/build/build.bat
 
 # IDE
 .idea/
